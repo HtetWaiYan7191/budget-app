@@ -39,3 +39,15 @@
  .splash-title {
     color: var(--primary-color);
  }
+
+ .icon {
+    color: var(--primary-color);
+ }
+
+ .navbar {
+    background-color: var(--primary-color);
+ }
+
+ .add-category-container {
+    background-color: #5fb523;
+ }
