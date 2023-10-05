@@ -13,3 +13,29 @@
  *= require_tree .
  *= require_self
  */
+
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+ :root {
+    --primary-color: #3778c2;
+    --secondary-color: #5fb523;
+    --text-color: #434b54;
+ }
+
+ .btn {
+    background-color: var(--primary-color);
+    color: whitesmoke;
+ }
+
+.btn2:hover {
+    background-color: var(--primary-color);
+    color: whitesmoke;
+ }
+
+ .splash-title {
+    color: var(--primary-color);
+ }
