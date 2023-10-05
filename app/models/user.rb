@@ -5,4 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :confirmable
     has_many :categories, dependent: :destroy
     has_many :purchases, dependent: :destroy
-end
+
+    validates :name, presence: true, allow_blank: false, length: { minimum: 2, maximum: 50 }
+  end
