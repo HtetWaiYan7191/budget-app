@@ -1,5 +1,25 @@
 require 'rails_helper'
 
 RSpec.describe Category, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  let(:user) {User.create(name: 'naruto', email: 'naruto@gmail.com')}
+
+  it 'should have an integer user_id' do
+    category = Category.new(user_id: user.id, name: 'food', icon: 'icon')
+    category.user_id = nil
+    expect(category).to_not be_valid
+  end
+
+  it 'name should be presence ' do 
+    category = Category.new(user_id: user.id, name: 'food', icon: 'icon')
+    category.name = nil
+    expect(category).to_not be_valid
+  end
+
+  it 'icon should be presence ' do
+    category = Category.new(user_id: user.id, name: 'food', icon: 'icon')
+    category.icon = nil
+    expect(category).to_not be_valid
+  end
+
+
 end
