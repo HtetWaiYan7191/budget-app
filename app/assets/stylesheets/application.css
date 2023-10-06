@@ -51,3 +51,12 @@
  .add-category-container {
     background-color: #5fb523;
  }
+
+ #category_city {
+   padding: 10px;
+    display: block;
+    margin: 10px auto;
+    border-bottom: 1px solid var(--text-color);
+    width: 90%;
+    font-size: 20px;
+ }
