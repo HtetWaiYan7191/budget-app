@@ -1,2 +1,15 @@
-<h1>Categories#new</h1>
-<p>Find me in app/views/categories/new.html.erb</p>
+<section class="category-section">
+    <div class="category-container">
+        <%= render "shared/add_category_header"%>
+    </div>
+
+    <div class="form-container  border p-5">
+        <%= form_with model: @category do |form| %>
+            <%= form.text_field :name, placeholder: "Enter New Category", class: 'px-5 py-2 border-b w-[90%] mx-auto block text-center text-[20px] '%>
+            <%= form.select :city, ["berlin", "chicago", "madrid"] %>
+
+
+        <% end %>
+
+    </div>
+</section>
