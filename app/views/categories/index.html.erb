@@ -2,9 +2,19 @@
     <div class="category-container"> 
         <%= render "shared/header"%>
 
-        <main class="main-body h-[70vh]">
-
-        </main>
+        <% if @categories.empty?%>
+            <h1>There is no categoies...</h1>
+        <% else %>
+            <ul class="category-container h-[70vh] bg-gray-100 pt-5">
+                <% @categories.each do |category| %>
+                    <li class="category-list w-[90%] mx-auto flex items-center shadow-lg px-3 py-5  my-5 bg-white">
+                            <div class="text-4xl me-4"><%= category.icon %></div>
+                            <div class="text-lg opacity-[0.8] font-semibold"><%= category.name %></div>
+                    </li>
+                    
+                <% end %>
+            </ul>
+        <% end %>
 
         <div class="add-category-container flex justify-center px-5 py-7">
             <%= link_to "ADD CATEGORY", new_category_path , class: ' border border-white text-center px-7 text-white py-3 w-[80%]'%>

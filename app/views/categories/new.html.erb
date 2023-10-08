@@ -2,13 +2,24 @@
     <div class="category-container">
         <%= render "shared/add_category_header"%>
     </div>
+    <% if flash[:notice].present? %>
+        <div class="notice">
+            <%= flash[:notice] %>
+        </div>
+    <% end %>
 
-    <div class="form-container  border p-5">
+    <div class="form-container">
         <%= form_with model: @category do |form| %>
-            <%= form.text_field :name, placeholder: "Enter New Category", class: 'px-5 py-2 border-b w-[90%] mx-auto block text-center text-[20px] '%>
-            <%= form.select :city, ["berlin", "chicago", "madrid"] %>
+        <div class="border p-5 h-[80vh]">
+            <%= form.text_field :name, required: true, placeholder: "Enter New Category", class: 'px-5 py-2 border-b w-[90%] mx-auto block outline-none text-[20px] '%>
+            <%= form.select :icon, options_for_select(@options, selected: @category.icon), { prompt: "Select an icon" } %>
+        </div>
+        
 
-
+         <div class="add-category-container flex justify-center px-5 py-7">
+            <%= form.submit "Create category", class: ' create-category border border-white text-center px-7 text-white py-3 w-[80%]'%>
+        </div>
+        
         <% end %>
 
     </div>
