@@ -48,7 +48,7 @@
     background-color: var(--primary-color);
  }
 
- .add-category-container {
+ .add-category-container, .sign-up-container {
     background-color: #5fb523;
  }
 
@@ -60,3 +60,4 @@
     width: 90%;
     font-size: 20px;
  }
+

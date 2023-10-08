@@ -7,13 +7,13 @@
             <i class="fa-solid fa-bars text-2xl text-white"></i>
         <% end%>
             <h2 class=" text-2xl font-semibold text-white uppercase"><%=  title%></h2>
-<% if title == "login"%>
+<% if title == "categories"%>
     <%= link_to sign_out_user_path, class: "text-white text-2xl" do %>
     <i class="fa-solid fa-arrow-right-from-bracket" style="color: #fcfcfc;"></i>
     <% end %>
-<% elsif title = "Sign up" %>
-    <%= link_to sign_out_user_path, class: "text-white text-2xl" do %>
-    <i class="fa-solid fa-arrow-right-from-bracket" style="color: #fcfcfc;"></i>
+<% elsif title = "register" %>
+    <%= link_to new_user_session_path, class: "text-white text-2xl" do %>
+        <span class="text-[18px] font-normal">Next</span>
     <% end %>
 <% else %>
     <%= link_to sign_out_user_path, class: "text-white text-2xl" do %>
