@@ -1,0 +1,14 @@
+ <%= render "shared/head", title: 'purchases', back: true%>
+ <section class="purchase-section"> 
+    <div class="purchase-container h-[70vh] bg-gray-100 pt-5"> 
+        <% if @purchases.empty? %>
+            <h2 class="text-center"> There is no purchase for this category </h2>
+        <% else %>
+            <h1>There is purchase</h1>
+        <% end %>
+    </div>
+
+    <div class="add-category-container flex justify-center px-5 py-7">
+            <%= link_to "ADD PURCHASE", new_category_purchase_path , class: ' border border-white text-center px-7 text-white py-3 w-[80%]'%>
+        </div>
+ </section>
