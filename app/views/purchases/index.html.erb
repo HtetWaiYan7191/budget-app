@@ -6,29 +6,28 @@
         <% else %>
             <ul class="category-container min-h-80 bg-gray-100 pt-5">
 
-             <li class="category-list w-[90%] mx-auto flex items-center justify-between shadow-lg px-3 py-5  my-5 bg-white">
+                        <li class="category-list w-[90%] mx-auto flex items-center justify-between shadow-lg px-3 py-5  my-5 bg-white">
                             <div class="text-4xl me-4"><%= @category.icon %></div>
                                 <div class="text-lg opacity-[0.8] font-semibold"><%= @category.name %></div> 
                                 <div><i class="fas fa-trash text-red-500"></i></div>
                         </li>
-                <% @purchases.each do |purchase| %>
-                        <li class="category-list w-[90%] mx-auto items-center  shadow-lg px-3 py-5  my-5 bg-white">
-                                <div class="card-body flex justify-between items-center p-1">
-                                    <span class="uppercase text-gray-500 font-semibold"><%= purchase.name %></span>
-                                    <span class="font-semibold text-lg">$<%= purchase.amount %></span>
-                                </div>
-                                <div class="card-footer flex justify-between items-center p-1">
-                                    <span class="uppercase text-gray-500 font-semibold"><%= purchase.created_at.strftime('%d-%m-%Y') %></span>
-                                <i class="fas fa-trash text-red-500"></i>
-                                </div>
-                        </li>
-                <% end %>
+                        <% @purchases.each do |purchase| %>
+                                <li class="category-list w-[90%] mx-auto items-center  shadow-lg px-3 py-5  my-5 bg-white">
+                                        <div class="card-body flex justify-between items-center p-1">
+                                            <span class="uppercase text-gray-500 font-semibold"><%= purchase.name %></span>
+                                            <span class="font-semibold text-lg">$<%= purchase.amount %></span>
+                                        </div>
+                                        <div class="card-footer flex justify-between items-center p-1">
+                                            <span class="uppercase text-gray-500 font-semibold"><%= purchase.created_at.strftime('%d-%m-%Y') %></span>
+                                       <%= button_to "delete", category_purchase_path(@category, purchase), method: :delete, class: 'px-3 py-1 bg-red-500 rounded-md text-white hover:bg-red-700' %>
 
-                <li class="category-list w-[90%] mx-auto flex items-center justify-between shadow-lg px-3 py-5  my-5 bg-white">
-                           
-                           <h2 class="font-semibold text-lg">Total Amount:</h2>
-                           <span class="font-semibold text-lg">$<%= @total %></span>
-                           
+                                        </div>
+                                </li>
+                        <% end %>
+
+                         <li class="category-list w-[90%] mx-auto flex items-center justify-between shadow-lg px-3 py-5  my-5 bg-white">
+                            <h2 class="font-semibold text-lg">Total Amount:</h2>
+                            <span class="font-semibold text-lg">$<%= @total %></span>
                         </li>
             </ul>
         <% end %>

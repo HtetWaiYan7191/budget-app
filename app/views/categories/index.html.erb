@@ -5,7 +5,7 @@
         <% if @categories.empty?%>
             <h1>There is no categoies...</h1>
         <% else %>
-            <ul class="category-container h-[70vh] bg-gray-100 pt-5">
+            <ul class="category-container min-h-[70vh] bg-gray-100 pt-5">
                 <% @categories.each do |category| %>
                     <%= link_to category_purchases_path(category_id: category.id) do%>
                         <li class="category-list w-[90%] mx-auto flex items-center shadow-lg px-3 py-5  my-5 bg-white">
