@@ -13,7 +13,7 @@ class PurchasesController < ApplicationController
   def create
     @purchase = Purchase.new(purchases_params)
     @category = Category.find(params[:category_id])
-      
+
   
     if @purchase.save
       CategoryPurchase.create(category_id: @category.id, purchase_id: @purchase.id)
@@ -28,6 +28,12 @@ class PurchasesController < ApplicationController
   
 
   def destroy
+    @purchase = Purchase.find(params[:id])
+    @category = Category.find(params[:category_id])
+    @category_purchases = CategoryPurchase.where(purchase_id: @purchase.id)
+    @category_purchases.destroy_all
+    @purchase.destroy!
+    redirect_to category_purchase_path(category_id: @category.id), notice: 'Purchas deleted successfully'
   end
 
   private 
