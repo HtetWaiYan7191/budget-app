@@ -11,13 +11,13 @@
     <div class="form-container">
         <%= form_with model: @category do |form| %>
         <div class="border p-5 h-[80vh]">
-            <%= form.text_field :name, required: true, placeholder: "Enter New Category", class: 'px-5 py-2 border-b w-[90%] mx-auto block outline-none text-[20px] '%>
+            <%= form.text_field :name, required: true, placeholder: "Enter New Category", class: 'px-5 py-2 border-b w-[90%] mx-auto block outline-none text-[20px] mb-5 '%>
             <%= form.select :icon, options_for_select(@options, selected: @category.icon), { prompt: "Select an icon" } %>
         </div>
         
 
          <div class="add-category-container flex justify-center px-5 py-7">
-            <%= form.submit "Create category", class: ' create-category border border-white text-center px-7 text-white py-3 w-[80%]'%>
+            <%= form.submit "Create category", class: ' create-category border border-white text-center px-7 text-white py-3 w-[80%] uppercase'%>
         </div>
         
         <% end %>
