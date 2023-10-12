@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'purchases/index'
+  get 'purchases/new'
+  get 'purchases/create'
+  get 'purchases/destroy'
   get '/sign_out_user', to: 'users#sign_out_user', as: 'sign_out_user'
 
   devise_for :users

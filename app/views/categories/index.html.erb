@@ -7,11 +7,12 @@
         <% else %>
             <ul class="category-container h-[70vh] bg-gray-100 pt-5">
                 <% @categories.each do |category| %>
-                    <li class="category-list w-[90%] mx-auto flex items-center shadow-lg px-3 py-5  my-5 bg-white">
-                            <div class="text-4xl me-4"><%= category.icon %></div>
-                            <div class="text-lg opacity-[0.8] font-semibold"><%= category.name %></div>
-                    </li>
-                    
+                    <%= link_to category_purchases_path(category_id: category.id) do%>
+                        <li class="category-list w-[90%] mx-auto flex items-center shadow-lg px-3 py-5  my-5 bg-white">
+                                <div class="text-4xl me-4"><%= category.icon %></div>
+                                <div class="text-lg opacity-[0.8] font-semibold"><%= category.name %></div>
+                        </li>
+                    <% end %>
                 <% end %>
             </ul>
         <% end %>
