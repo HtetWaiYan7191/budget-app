@@ -10,8 +10,8 @@ Rails.application.routes.draw do
     root 'categories#splash', as: :unauthenticated_root
   end
 
-  resources :categories, only: %i[index new  create] do
-    resources :purchases, only: %i[index new create]
+  resources :categories, only: %i[index new  create destroy] do
+    resources :purchases, only: %i[index new create destroy]
   end
   
 end
