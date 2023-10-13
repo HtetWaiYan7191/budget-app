@@ -3,7 +3,31 @@
         <%= render "shared/head", title: 'categories', back: false%>
 
         <% if @categories.empty?%>
-            <h1>There is no categoies...</h1>
+        <div class="no-category-container min-h-[75vh] flex justify-center items-center">
+            <div class="getting-started-container w-[95%] p-5">
+                <h2 class="text-center">Getting Started ? </h2>
+                <div class="introduction my-5">
+                    <p>a mobile web application where you can manage your budget: you have a list of transactions associated with a category, 
+                    so that you can see how much money you spent and on what.</p>
+                </div>
+                <div class="for-category my-5">
+                <h2>Category</h2>
+                    <p>
+                        For each category, the user can see their name, icon and the total amount of all the transactions that belongs to that category.
+                        When the user clicks (or taps) on a category item, the application navigates to the transactions page for that category.
+                        There is a button "add a new category" at the bottom that brings the user to the page to create a new category.
+                    </p>
+                </div>
+
+                <div class="for-purchase my-5">
+                <h2>Purchase</h2>
+                    <p>
+                        Here, you can view and manage transactions in a specific category. The total category amount is displayed at the top. To add a new transaction, scroll down and click "Add a New Transaction." Use the "<" button to return to the home page. Enjoy!
+                    </p>
+                </div>
+            </div>
+
+        </div>
         <% else %>
             <ul class="category-container min-h-[80vh] bg-gray-100 pt-5">
                 <% @categories.each do |category| %>
