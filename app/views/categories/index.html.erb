@@ -8,9 +8,10 @@
             <ul class="category-container min-h-[70vh] bg-gray-100 pt-5">
                 <% @categories.each do |category| %>
                     <%= link_to category_purchases_path(category_id: category.id) do%>
-                        <li class="category-list w-[90%] mx-auto flex items-center shadow-lg px-3 py-5  my-5 bg-white">
+                        <li class="category-list w-[90%] mx-auto flex justify-between shadow-lg px-3 py-5  my-5 bg-white">
                                 <div class="text-4xl me-4"><%= category.icon %></div>
-                                <div class="text-lg opacity-[0.8] font-semibold"><%= category.name %></div>
+                                <div class="text-lg  font-semibold"><%= category.name %></div>
+                                <div class="text-lg  font-semibold">$<%= format('%.2f', category.purchases.sum(:amount)) %></div>
                         </li>
                     <% end %>
                 <% end %>
