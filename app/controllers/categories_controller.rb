@@ -33,6 +33,12 @@ class CategoriesController < ApplicationController
   def splash
   end
 
+  def destroy
+    @category = Category.find(params[:id])
+    @category.destroy!
+    redirect_to categories_path, notice: 'Category Deleted Successfully '
+  end
+
   private
 
   def categories_params

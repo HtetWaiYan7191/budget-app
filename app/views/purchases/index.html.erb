@@ -8,8 +8,11 @@
 
                         <li class="category-list w-[90%] mx-auto flex items-center justify-between shadow-lg px-3 py-5  my-5 bg-white">
                             <div class="text-4xl me-4"><%= @category.icon %></div>
-                                <div class="text-lg opacity-[0.8] font-semibold"><%= @category.name %></div> 
-                                <div><i class="fas fa-trash text-red-500"></i></div>
+                                <div class="text-lg opacity-[0.8] font-semibold uppercase"><%= @category.name %></div> 
+                                <%= button_to category_path(@category), method: :delete, class: '' do %>
+                                    <i class="fas fa-trash text-red-500 text-2xl"></i>
+                                <% end %>
+
                         </li>
                         <% @purchases.each do |purchase| %>
                                 <li class="category-list w-[90%] mx-auto items-center  shadow-lg px-3 py-5  my-5 bg-white">
