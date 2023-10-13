@@ -1,4 +1,13 @@
  <%= render "shared/head", title: 'purchases', back: true%>
+ <div class="success-fail">
+             <% if flash[:notice] %>
+                <%= render 'shared/message', message: flash[:notice], status: 'notice' %>
+            <% end %>
+
+            <% if flash[:alert] %>
+                <%= render 'shared/message', message: flash[:alert], status: 'alert' %>
+            <% end %>
+           </div>
  <section class="purchase-section"> 
     <div class="purchase-container min-h-[80vh]   bg-gray-100 pt-5"> 
         <% if @purchases.empty? %>

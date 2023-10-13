@@ -115,6 +115,18 @@
    font-size: small;
  }
 
+ .notice {
+   background-color: var(--secondary-color);
+   color: white;
+   padding: 10px;
+ }
+
+ .alert {
+   background-color: red;
+   color: whitesmoke;
+   padding: 10px;
+ }
+
  @media screen and (max-height: 450px) {
    .sidenav {padding-top: 15px;}
    .sidenav a {font-size: 18px;}

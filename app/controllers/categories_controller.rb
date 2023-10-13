@@ -26,7 +26,7 @@ class CategoriesController < ApplicationController
     if @category.save
       redirect_to categories_path, notice: 'Category was successfully created'
     else
-      redirect_to new_category_path, notice: 'Cannot create a new category'
+      redirect_to new_category_path, alert: 'Cannot create a new category'
     end
   end
 
@@ -36,7 +36,7 @@ class CategoriesController < ApplicationController
   def destroy
     @category = Category.find(params[:id])
     @category.destroy!
-    redirect_to categories_path, notice: 'Category Deleted Successfully '
+    redirect_to categories_path, alert: 'Category Deleted Successfully '
   end
 
   private

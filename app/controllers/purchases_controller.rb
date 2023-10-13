@@ -33,7 +33,7 @@ class PurchasesController < ApplicationController
     @category_purchases = CategoryPurchase.where(purchase_id: @purchase.id)
     @category_purchases.destroy_all
     @purchase.destroy!
-    redirect_to category_purchase_path(category_id: @category.id), notice: 'Purchas deleted successfully'
+    redirect_to category_purchase_path(category_id: @category.id), alert: 'Purchas deleted successfully'
   end
 
   private 
