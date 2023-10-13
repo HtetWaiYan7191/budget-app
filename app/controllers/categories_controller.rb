@@ -2,22 +2,22 @@ class CategoriesController < ApplicationController
   def index
     @categories = Category.all.order('created_at DESC')
   end
-  
+
   def new
     @category = Category.new
     @options = [
-      ["🍔"],
-    ["🛒"],
-    ["🚗"],
-    ["🐶"],
-    ["📚"],
-    ["💻"],
-    ["🎁"],
-    ["🏠"],
-    ["🏥"],
-    ["🎬"],
-    ["👔"],
-    ["🎓"],
+      ['🍔'],
+      ['🛒'],
+      ['🚗'],
+      ['🐶'],
+      ['📚'],
+      ['💻'],
+      ['🎁'],
+      ['🏠'],
+      ['🏥'],
+      ['🎬'],
+      ['👔'],
+      ['🎓']
     ]
   end
 
@@ -30,8 +30,7 @@ class CategoriesController < ApplicationController
     end
   end
 
-  def splash
-  end
+  def splash; end
 
   def destroy
     @category = Category.find(params[:id])

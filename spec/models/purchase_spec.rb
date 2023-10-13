@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Purchase, type: :model do
-  describe "Purchase model" do
-    let(:user) {User.create(name: 'naruto', email: 'naruto@gmail.com')}
+  describe 'Purchase model' do
+    let(:user) { User.create(name: 'naruto', email: 'naruto@gmail.com') }
 
     it 'should have an integer author_id' do
       purchase = Purchase.new(author_id: user.id, name: 'apple', amount: 11)

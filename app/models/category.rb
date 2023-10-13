@@ -4,5 +4,4 @@ class Category < ApplicationRecord
   has_many :purchases, through: :category_purchases
 
   validates :name, :icon, presence: true
-  
 end

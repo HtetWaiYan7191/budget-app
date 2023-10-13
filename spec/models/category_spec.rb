@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Category, type: :model do
-  let(:user) {User.create(name: 'naruto', email: 'naruto@gmail.com')}
+  let(:user) { User.create(name: 'naruto', email: 'naruto@gmail.com') }
 
   it 'should have an integer user_id' do
     category = Category.new(user_id: user.id, name: 'food', icon: 'icon')
@@ -9,7 +9,7 @@ RSpec.describe Category, type: :model do
     expect(category).to_not be_valid
   end
 
-  it 'name should be presence ' do 
+  it 'name should be presence ' do
     category = Category.new(user_id: user.id, name: 'food', icon: 'icon')
     category.name = nil
     expect(category).to_not be_valid
@@ -20,6 +20,4 @@ RSpec.describe Category, type: :model do
     category.icon = nil
     expect(category).to_not be_valid
   end
-
-
 end

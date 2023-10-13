@@ -14,120 +14,120 @@
  *= require_self
  */
 
- * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
- }
-
- :root {
-    --primary-color: #3778c2;
-    --secondary-color: #5fb523;
-    --text-color: #434b54;
- }
-
- .btn {
-    background-color: var(--primary-color);
-    color: whitesmoke;
- }
-
-.btn2:hover {
-    background-color: var(--primary-color);
-    color: whitesmoke;
- }
-
- .splash-title {
-    color: var(--primary-color);
- }
-
- .icon {
-    color: var(--primary-color);
- }
-
- .navbar {
-    background-color: var(--primary-color);
- }
-
- .add-category-container, .sign-up-container {
-    background-color: #5fb523;
- }
-
- #category_icon {
-   padding: 10px;
-    display: block;
-    margin: 10px auto;
-    border-bottom: 1px solid var(--text-color);
-    width: 90%;
-    font-size: 20px;
- }
-
- .sidenav {
-   height: 100%;
-   width: 0;
-   position: fixed;
-   z-index: 1;
-   top: 0;
-   left: 0;
-   background: linear-gradient(to bottom, #0a4486, #3778c2);
-   overflow-x: hidden;
-   transition: 0.5s;
-   opacity: 0.9;
-   backdrop-filter: blur(5px);
- }
- 
- .sidenav a {
-   padding: 8px 8px 8px 32px;
-   text-decoration: none;
-   color: whitesmoke;
-   display: block;
-   transition: 0.3s;
- }
- 
- .sidenav a:hover {
-   color: #f1f1f1;
- }
-
- .closebtn {
-   font-size: 2.5rem;
- }
-
- .getting-started-container {
-   background-color: rgba(55, 120, 194, 0.8);
-   border-radius: 12px;
-   border: 1px solid rgb(162, 162, 162);
- }
-
- .no-purchase-container h2 {
-   background-color: rgba(55, 120, 194, 0.8);
-   border: 1px solid whitesmoke;
-   border-radius: 12px;
-
- }
-
- .getting-started-container h2 {
-   font-weight: bold;
-   color: white;
-   padding: 8px 0px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
- .getting-started-container p {
-   color: whitesmoke;
-   font-size: small;
- }
+:root {
+  --primary-color: #3778c2;
+  --secondary-color: #5fb523;
+  --text-color: #434b54;
+}
 
- .notice {
-   background-color: var(--secondary-color);
-   color: white;
-   padding: 10px;
- }
+.btn {
+  background-color: var(--primary-color);
+  color: whitesmoke;
+}
 
- .alert {
-   background-color: red;
-   color: whitesmoke;
-   padding: 10px;
- }
+.btn2:hover {
+  background-color: var(--primary-color);
+  color: whitesmoke;
+}
 
- @media screen and (max-height: 450px) {
-   .sidenav {padding-top: 15px;}
-   .sidenav a {font-size: 18px;}
- } 
+.splash-title {
+  color: var(--primary-color);
+}
+
+.icon {
+  color: var(--primary-color);
+}
+
+.navbar {
+  background-color: var(--primary-color);
+}
+
+.add-category-container,
+.sign-up-container {
+  background-color: #5fb523;
+}
+
+#category_icon {
+  padding: 10px;
+  display: block;
+  margin: 10px auto;
+  border-bottom: 1px solid var(--text-color);
+  width: 90%;
+  font-size: 20px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to bottom, #0a4486, #3778c2);
+  overflow-x: hidden;
+  transition: 0.5s;
+  opacity: 0.9;
+  backdrop-filter: blur(5px);
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  color: whitesmoke;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.closebtn {
+  font-size: 2.5rem;
+}
+
+.getting-started-container {
+  background-color: rgba(55, 120, 194, 0.8);
+  border-radius: 12px;
+  border: 1px solid rgb(162, 162, 162);
+}
+
+.no-purchase-container h2 {
+  background-color: rgba(55, 120, 194, 0.8);
+  border: 1px solid whitesmoke;
+  border-radius: 12px;
+}
+
+.getting-started-container h2 {
+  font-weight: bold;
+  color: white;
+  padding: 8px 0;
+}
+
+.getting-started-container p {
+  color: whitesmoke;
+  font-size: small;
+}
+
+.notice {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 10px;
+}
+
+.alert {
+  background-color: red;
+  color: whitesmoke;
+  padding: 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav { padding-top: 15px; }
+  .sidenav a { font-size: 18px; }
+}
