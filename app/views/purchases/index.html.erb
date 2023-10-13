@@ -2,7 +2,9 @@
  <section class="purchase-section"> 
     <div class="purchase-container min-h-[80vh]   bg-gray-100 pt-5"> 
         <% if @purchases.empty? %>
-            <h2 class="text-center"> There is no purchase for this category </h2>
+        <div class="no-purchase-container flex justify-center items-center min-h-[70vh]">
+            <h2 class="text-center text-white border px-4 py-10  shadow-sm text-lg font-semibold"> There is no purchase for this category </h2>
+        </div>
         <% else %>
             <ul class="category-container min-h-80 bg-gray-100 pt-5">
 
