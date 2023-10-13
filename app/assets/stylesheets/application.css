@@ -113,7 +113,6 @@
  .getting-started-container p {
    color: whitesmoke;
    font-size: small;
-   line-height: wide
  }
 
  @media screen and (max-height: 450px) {
