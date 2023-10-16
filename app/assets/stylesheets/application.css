@@ -13,11 +13,14 @@
  *= require_tree .
  *= require_self
  */
+ @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Noto Sans JP', sans-serif;
+
 }
 
 :root {
@@ -32,7 +35,7 @@
 }
 
 .btn2:hover {
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   color: whitesmoke;
 }
 
