@@ -15,7 +15,7 @@ services:
         fromDatabase:
           name: postgres
           property: connectionString
-      - key: RAILS_MASTER_KEY
+      - key: 06eac1c979397014d4e0cd482e61c536
         sync: false
      ipAllowList: []
      plan: free
