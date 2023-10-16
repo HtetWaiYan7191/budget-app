@@ -1,8 +1,8 @@
 databases:
   - name: postgres
-    ipAllowList: []
     databaseName: budget_app
     user: budget_app
+    ipAllowList: []
 
 services:
   - type: web
@@ -15,8 +15,6 @@ services:
         fromDatabase:
           name: postgres
           property: connectionString
-      - key: 06eac1c979397014d4e0cd482e61c536
-        sync: false
-     ipAllowList: []
-     plan: free
-     maxmemoryPolicy: noeviction
+    ipAllowList: []
+    plan: free
+    maxmemoryPolicy: noeviction
