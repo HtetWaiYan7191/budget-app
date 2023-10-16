@@ -1,0 +1,18 @@
+<div class=" message-container">
+        <div class="<%= status %> flex justify-between items-center" id="alert-box">
+          <% if status == 'notice' %>
+            <span class=""><%= notice %></span>
+          <% else %>
+                <span class=""><%= alert %></span>
+            <% end %>
+            <i class = "fas fa-xmark text-xl pe-3"  onclick='closeMessage()'></i>
+        </div>
+
+</div>
+
+<script>
+
+    function closeMessage() {
+        document.getElementById('alert-box').style.display = "none"
+    }
+</script>

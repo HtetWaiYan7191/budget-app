@@ -1,0 +1,54 @@
+ <%= render "shared/head", title: 'purchases', back: true%>
+ <div class="success-fail">
+             <% if flash[:notice] %>
+                <%= render 'shared/message', message: flash[:notice], status: 'notice' %>
+            <% end %>
+
+            <% if flash[:alert] %>
+                <%= render 'shared/message', message: flash[:alert], status: 'alert' %>
+            <% end %>
+           </div>
+ <section class="purchase-section"> 
+    <div class="purchase-container min-h-[80vh]   bg-gray-100 pt-5"> 
+        <% if @purchases.empty? %>
+        <div class="no-purchase-container flex justify-center items-center min-h-[70vh]">
+            <h2 class="text-center text-white border px-4 py-10  shadow-sm text-lg font-semibold"> There is no purchase for this category </h2>
+        </div>
+        <% else %>
+            <ul class="category-container min-h-80 bg-gray-100 pt-5">
+
+                        <li class="category-list w-[90%] mx-auto flex items-center justify-between shadow-lg px-3 py-5  my-5 bg-white">
+                            <div class="text-4xl me-4"><%= @category.icon %></div>
+                                <div class="text-lg opacity-[0.8] font-semibold uppercase"><%= @category.name %></div> 
+                                <%= button_to category_path(@category), method: :delete, class: '' do %>
+                                    <i class="fas fa-trash text-red-500 text-2xl"></i>
+                                <% end %>
+
+                        </li>
+                        <% @purchases.each do |purchase| %>
+                                <li class="category-list w-[90%] mx-auto items-center  shadow-lg px-3 py-5  my-5 bg-white">
+                                        <div class="card-body flex justify-between items-center p-1">
+                                            <span class="uppercase text-gray-500 font-semibold"><%= purchase.name %></span>
+                                            <span class="font-semibold text-lg">$<%=  format('%.2f',purchase.amount)  %></span>
+                                        </div>
+                                        <div class="card-footer flex justify-between items-center p-1">
+                                            <span class="uppercase text-gray-500 font-semibold"><%= purchase.created_at.strftime('%d-%m-%Y') %></span>
+                                       <%= button_to  category_purchase_path(@category, purchase), method: :delete, class: '' do %>
+                                            <i class="fas fa-trash text-red-500 text-2xl"></i>
+                                        <% end %>
+                                        </div>
+                                </li>
+                        <% end %>
+
+                         <li class="category-list w-[90%] mx-auto flex items-center justify-between shadow-lg px-3 py-5  my-5 bg-white">
+                            <h2 class="font-semibold text-lg">Total Amount:</h2>
+                            <span class="font-semibold text-lg">$<%= format('%.2f',@total) %></span>
+                        </li>
+            </ul>
+        <% end %>
+    </div>
+
+    <div class="add-category-container flex justify-center px-5 py-7">
+            <%= link_to "ADD PURCHASE", new_category_purchase_path(category_id: @category.id) , class: ' border border-white text-center px-7 text-white py-3 w-[80%]'%>
+        </div>
+ </section>

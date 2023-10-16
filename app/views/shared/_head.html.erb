@@ -1,0 +1,98 @@
+<nav class="navbar flex justify-between items-center w-[100%] px-3 py-5">
+        <% if back%>
+          <%= link_to("javascript:history.back()", class: "text-white text-2xl") do %>
+            <i class="fas fa-angle-left text-2xl text-white" ></i>
+        <% end %>
+        <% else%>
+            <i class="fa-solid fa-bars text-2xl text-white" onclick="openNav()"></i>
+            <div id="mySidenav" class="sidenav">
+                <div class="cross-container flex justify-end pe-5">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                </div>
+                <div class="nav-header flex flex-col items-center justify-center">
+                    <i class="fas fa-user text-white text-2xl p-2  border-b"></i>
+                    <h2 class="text-white font-semibold uppercase p-2 text-2xl "><%= current_user.name %></h2>
+                </div>
+
+                <div class="flex items-center mt-5 ms-10">
+                    <div class="icon-container border rounded-[50%] flex justify-center items-center me-5">
+                        <i class="fas fa-code text-white p-3"></i>
+                    </div>
+                    <div class="border-b w-[100%] p-3">
+                        <a href="https://github.com/HtetWaiYan7191/budget-app/" target='blank'><h2 class=" text-white text-lg">Source</h2></a>
+                    </div>
+                </div>
+
+                <div class="flex items-center mt-5 ms-10">
+                    <div class="icon-container border rounded-[50%] flex justify-center items-center me-5">
+                        <i class="fas fa-user-check text-white p-3"></i>
+                    </div>
+                    <div class="border-b w-[100%] p-3">
+                        <a href="https://htetwaiyan19-portfolio.onrender.com/" target='blank'><h2 class=" text-white text-lg">Profile</h2></a>
+                    </div>
+                </div>
+
+                 <div class="flex items-center mt-5 ms-10">
+                    <div class="icon-container border rounded-[50%] flex justify-center items-center me-5">
+                        <i class="fab fa-github text-white p-3"></i>
+                    </div>
+                    <div class="border-b w-[100%] p-3">
+                        <a href="https://github.com/HtetWaiYan7191/" target='blank'><h2 class=" text-white text-lg">Github</h2></a>
+                    </div>
+                </div>
+
+                 <div class="flex items-center mt-5 ms-10">
+                    <div class="icon-container border rounded-[50%] flex justify-center items-center me-5">
+                        <i class="fab fa-linkedin text-white p-3"></i>
+                    </div>
+                    <div class="border-b w-[100%] p-3">
+                        <a href="https://www.linkedin.com/in/htet-wai-yan19/" target='blank'><h2 class=" text-white text-lg">Linkedin</h2></a>
+                    </div>
+                </div>
+            </div>
+        <% end%>
+
+
+            <h2 class=" text-2xl font-semibold text-white uppercase"><%=  title%></h2>
+
+
+<% if title == "categories"%>
+    <%= link_to sign_out_user_path, class: "text-white text-2xl" do %>
+    <i class="fa-solid fa-arrow-right-from-bracket" style="color: #fcfcfc;"></i>
+    <% end %>
+
+    <% elsif title == "purchases" %>
+            <%= link_to sign_out_user_path, class: "text-white text-2xl" do %>
+            <i class="fa-solid fa-arrow-right-from-bracket" style="color: #fcfcfc;"></i>
+    <% end %>
+
+    <% elsif title == "register"  %>
+        <%= link_to new_user_session_path, class: "text-white text-2xl" do %>
+        <span class="text-[18px] font-normal">Next</span>
+    <% end %>
+
+
+    <% elsif title ==  "login"  %>
+         <%= link_to new_user_registration_path, class: "text-white text-2xl" do %>
+        <span class="fas fa-user-plus"></span>
+    <% end %>
+
+
+    <% else %>
+
+        <%= link_to sign_out_user_path, class: "text-white text-2xl" do %>
+        <i class="fa-solid fa-arrow-right-from-bracket" style="color: #fcfcfc;"></i>
+        <% end %>
+    <% end %>
+
+    </nav>
+
+    <script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "300px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
