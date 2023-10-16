@@ -68,7 +68,7 @@
 
 ## 🎬  VIdeo Walkthrough <a name="live-demo"></a>
 
-- [Video Demo Link](https://budget-app-ugv5.onrender.com)
+- [Video Demo Link](https://www.loom.com/share/fbe444803b064d86bb195fb783c96295?sid=80d8f963-e415-4115-a1b9-b458c9e735ad)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
