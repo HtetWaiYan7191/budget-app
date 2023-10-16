@@ -1,4 +1,5 @@
 class PurchasesController < ApplicationController
+  before_action :authenticate_user!
   def index
     @category = Category.find(params[:category_id])
     @purchases = @category.purchases
