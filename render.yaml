@@ -1,12 +1,12 @@
 databases:
   - name: postgres
+    ipAllowList: []
     databaseName: budget_app
     user: budget_app
-    ipAllowList: []
 
 services:
   - type: web
-    name: budget-app
+    name: budget_app
     env: ruby
     buildCommand: "./render-build.sh"
     startCommand: "bundle exec rails s"
@@ -15,6 +15,5 @@ services:
         fromDatabase:
           name: postgres
           property: connectionString
-    ipAllowList: []
-    plan: free
-    maxmemoryPolicy: noeviction
+      - key: RAILS_MASTER_KEY
+        sync: false
