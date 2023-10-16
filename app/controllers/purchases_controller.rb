@@ -20,8 +20,6 @@ class PurchasesController < ApplicationController
       redirect_to category_purchases_path(category_id: @category.id), notice: 'Purchase was successfully created.'
     else
       redirect_to new_category_purchase_path(category_id: @category.id), notice: 'Purchase cannot create '
-
-
     end
   end
 
