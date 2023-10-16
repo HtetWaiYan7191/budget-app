@@ -15,6 +15,7 @@
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
   - [🚀 Live Demo ](#-live-demo-)
+  - [🎬  VIdeo Walkthrough ](#--video-walkthrough-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -59,7 +60,15 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link]()
+- [Live Demo Link](https://budget-app-ugv5.onrender.com)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- Video Walkthrough -->
+
+## 🎬  VIdeo Walkthrough <a name="live-demo"></a>
+
+- [Video Demo Link](https://budget-app-ugv5.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
