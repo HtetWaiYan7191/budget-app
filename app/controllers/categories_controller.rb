@@ -1,6 +1,7 @@
 class CategoriesController < ApplicationController
+  before_action :authenticate_user!, except: [:splash]
   def index
-    @categories = Category.all.order('created_at DESC')
+    @categories = Category.where(user_id: current_user.id).includes(:purchases)
   end
 
   def new
