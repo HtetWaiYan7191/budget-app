@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <h1><b>Blog App</b></h1>
+  <h1><b>Budget App</b></h1>
 
 </div>
 
@@ -10,7 +10,7 @@
 
 ## 📗 Table of Contents
 
-- [📖 Blog app ](#-blog-app-)
+- [📖 Budget app ](#-budget-app-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -28,9 +28,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Blog app <a name="about-project"></a>
+# 📖 Budget app <a name="about-project"></a>
 
-**Blog app** is an app user can do the CRUD functionality in the web app.
+**Budget app** is a web application that allows users to perform CRUD (Create, Read, Update, Delete) operations. Users can add categories to keep track of their financial expenses. In each category, users can add purchases. On the category page, users can view the total amount of purchase items. When looking at the purchase page, users can see detailed data for each purchase.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -75,15 +75,15 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 
 ```bash
-  git clone https://github.com/HtetWaiYan7191/blog-app.git
+  git clone https://github.com/HtetWaiYan7191/budget-app.git
 ```
 
 You need to setup database for these project
 
 ```
-  development = blog_dev
-  test        = blog_test
-  production  = Blog-production
+  development = budget_dev
+  test        = budget_test
+  production  = budget-production
 ```
 
 or you can use your own database and change the ```config/database.yml```
@@ -115,7 +115,7 @@ or you can use your own database and change the ```config/database.yml```
 Install this project with:
 
 ```bash
-  cd Blog
+  cd budget-app
   bundle install
 ```
 
@@ -141,11 +141,6 @@ it will run the the server on ```localhost:3000```
 - GitHub: [@HtetWaiYan7191](https://github.com/HtetWaiYan7191)
 - LinkedIn: [Htet Wai Yan](https://www.linkedin.com/in/htet-wai-yan19/)
 
-👤 **John Murianki**
-- GitHub: [@githubhandle](https://github.com/tjay1760)
-- Twitter: [@twitterhandle](https://twitter.com/TjayPod)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/john-murianki-thiongo)
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -153,7 +148,7 @@ it will run the the server on ```localhost:3000```
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Add UI System**
+- **Add Animation**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -164,7 +159,7 @@ it will run the the server on ```localhost:3000```
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/HtetWaiYan7191/blog-app/issues).
+Feel free to check the [issues page](https://github.com/HtetWaiYan7191/budget-app/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
