@@ -1,7 +1,11 @@
 class CategoriesController < ApplicationController
   before_action :authenticate_user!, except: [:splash]
   def index
-    @categories = Category.where(user_id: current_user.id).includes(:purchases)
+    @categories = if params[:search]
+                    Category.where(user_id: current_user.id).search_by_name(params[:search])
+                  else
+                    Category.where(user_id: current_user.id).includes(:purchases)
+                  end
   end
 
   def new
